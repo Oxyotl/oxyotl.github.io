@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="http://www.w3schools.com/lib/w3.js"></script>
+		<link rel="stylesheet" type="text/css" href="FilterNavBarCss.css"></link>
+	</head>
+	<body style="background-color:#d4e6e6;">
+		<nav class="navbar navbar-default ZValueHigh navbar-fixed-top"  style="background-color: #519f9f;">
+			<div class="container-fluid">
+				<div class="navbar-header" style="margin:10px 10px 0px 0px;">
+					<button style="background-color: #368f8f" data-toggle="collapse" data-target="#navigationDropDown" class="btn btn-lg"><b>Navigation</b></button>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><h2>JWW Eportfolio Home</h2></li>
+				</ul>
+			</div>
+		</nav>
+		<nav class="navbar navbar-default"  style="background-color: #519f9f; margin:0px;">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="btn btn-lg">navigation
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><h2>JW Eportfolio Home</h2></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="navigationDropDown" class="collapse Scroll ZValueHigh" style="position: fixed" >
+					<input id="usr" type="text" class="form-control" oninput="w3.filterHTML('#navigationTable', '.item', this.value)" placeholder="Search for a Page">
+					<table id="navigationTable" class = "table">
+					<tr class="item">
+						<td>Title</td>
+						<td onclick="location.href='#'">Home</td>
+					</tr>
+					<tr class="item">
+						<th>Title</th>
+						<th>Computing</th>						
+					</tr>
+					<tr class="item">
+						<td>Computing</td>
+						<td onclick="location.href='#'">Computational thinking</td>
+					</tr>
+					<tr class="item">
+						<td>Computing</td>
+						<td onclick="location.href='#'">Elements of computational thinking</td>
+					</tr>
+					<tr class="item">
+						<td>Computing</td>
+						<td onclick="location.href='#'">Computer systems</td>
+					</tr>
+					<tr class="item">
+						<th>Title</th>
+						<th>Mathematics</th>
+						<td>C1</td>
+						<td>C2</td>
+						<td>M1</td>
+					</tr>
+					<tr class="item">
+						<td>Mathematics</td>
+						<td onclick="location.href='#'">Algebra and Functions</td>
+						<td>C1</td>
+					</tr>
+					<tr class="item">
+						<td>Title</td>
+						<th>Electronics</th>
+						<td>Unit1</td>
+						<td>Unit2</td>
+					</th>
+					<tr class="item">
+						<td>Electronics</td>
+						<td onclick="location.href='#'">Systems and Subsystems</td>
+						<td>Unit1</td>
+					</tr>
+					<tr class="item">
+						<td>Title</td>
+						<th>Projects</th>
+					<tr class="item">
+						<td>Project</td>
+						<td onclick="location.href='#'">Electronic d6</td>
+					</tr>
+					</table>
+		</div>
+		<div class="container-fluid ZValueLow">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<h2>Hello World</h2>
+					<p>This is my first paragraph horay.</p>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+	</body>
+</html>
