@@ -5,3 +5,17 @@
 .imgHome{
 	width:100%;
 }
+
+.KeyTerms{
+	margin: 0px 5px 0px 5px;
+	padding: 1px 5px 2px 5px;
+	background-color: #77d4ff;
+	border-radius: 25px;
+}
+
+.KeyPoints{
+	margin: 0px 5px 0px 5px;
+	padding: 1px 5px 2px 5px;
+	background-color: #ff7777;
+	border-radius: 25px;
+}
