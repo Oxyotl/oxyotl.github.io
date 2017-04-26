@@ -85,13 +85,359 @@
 					<p>In ASCII each character of the alphabet, numbers, symbols and control codes are represented 
 					by an agreed upon binary patterns. The first iteration of ASCII used a single byte (8 bits), it 
 					used 7 bits to represent the character and 1 bit as a parity bit, this allowed for the use of 
-					128 different characters.
-					</p>
+					128 different characters.</p>
+					<img src="ComputingPictures/ComputingASCIITable.jpg" class="img-rounded imgHome">
+					<p>The next Iteration of ASCII used all 8 bits to represent characters, this allowed the use of
+					256 different characters. This new iteration is called Extended ASCII.</p>
+					<img src="ComputingPictures/ComputingASCIIExtendedTable.jpg" class="img-rounded imgHome">
+					<p>With only 8 bits to use you can only represent 256 characters, making it impossible to display 
+					all of the worlds alphabets and symbols. This led to ASCII being replaced by Unicode. Unicode 
+					originally only used 16 bits allowing 65536 characters. This 16 bit limitation was removed by 
+					using a series of code pages, each page represents a chosen language. Because of this Unicode has
+					no limits on how many characters there is.</p>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Boolean Data</h2>
+					<p>Boolean is a data type that can only take one of two values, True or False using 1 for True and 
+					0 for False. Boolean data only requires one bit to store a value but it normally uses an entire byte
+					for convenience. Boolean data is used to flag if an event has occured.</p>
+				</div>
+				<div class="col-sm-3"></div>
+    		</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Representing Positive Integers in Binary</h2>
+					<table class="table-bordered table-condensed">
+						<tr>
+							<th>Column value</th>
+							<td>128=2<sup>7</sup></td>
+							<td>64=2<sup>6</sup></td>
+							<td>32=2<sup>5</sup></td>
+							<td>16=2<sup>4</sup></td>
+							<td>8=2<sup>3</sup></td>
+							<td>4=2<sup>2</sup></td>
+							<td>2=2<sup>1</sup></td>
+							<td>1=2<sup>0</sup></td>
+						</tr>
+						<tr>
+							<th>Binary number</th>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Is</th>
+							<td>128+</td>
+							<td>0+</td>
+							<td>0+</td>
+							<td>16+</td>
+							<td>8+</td>
+							<td>0+</td>
+							<td>2+</td>
+							<td>1</td>
+						</tr>
+					</table>
+					<p>Which is 128+16+8+2+1=155 in denary.</p>
+					<p>To get from denary to binary you divide repeatedly by 2 and recording the remainder unti 0 is reached.</p>
+					<p>155 in denary to binary is:</p>
+					<p>155/2=77 r=1 This is the Least Significant Bit.</p>
+					<p>77/2=38 r=1</p>
+					<p>38/2=19 r=0</p>
+					<p>19/2=9 r=1</p>
+					<p>9/2=4 r=1</p>
+					<p>4/2=2 r=0</p>
+					<p>2/2=1 r=0</p>
+					<p>1/2=0 r=1 This is the Most Significant Bit.</p>
+					<p>So the denary number in binary is 10011011.</p>
 				</div>
 				<div class="col-sm-3">
-					
+					<div class="KeyPoints">
+						<h2>Key Points</h2>
+						<p>Binary is a number system based on 2. The column values are the powers of 2 starting at 2<sup>0</sup></p>
+						<p>Denary is the number system we use on an everyday basis and is based on 10. The column values 
+						are the powers of 10 starting at 10<sup>0</sup></p>
+						<p>Integers are represented in binary using powers of 2. We add up the column value where there is 
+						a 1 in the binary number to get the denary equivalent.</p>
+						<p>To convert from denary to binary, you divide by 2 repeatedly and write down the remainder at each 
+						stage.</p>
+					</div>
 				</div>
 			</div>
-    		</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Representing Negative Integers in Binary</h2>
+					<p>There are tow ways to represent negative integers in binary.</p>
+					<h3>Sign and Magnitude</h3>
+					<p>Sign and magnitude works like the denary convention of representing negative integers by putting a + infront 
+					for positive and - for negative. However in sign and magnitude the sign takes up the Most Significant Bit.
+					This Most Significant Bit becomes the sign bit. To store the sign as a binary value it is 0 for + and 1 for -.</p>
+					<table class="table-bordered table-condensed">
+						<tr>
+							<th>Column value</th>
+							<td>Sign bit</td>
+							<td>64=2<sup>6</sup></td>
+							<td>32=2<sup>5</sup></td>
+							<td>16=2<sup>4</sup></td>
+							<td>8=2<sup>3</sup></td>
+							<td>4=2<sup>2</sup></td>
+							<td>2=2<sup>1</sup></td>
+							<td>1=2<sup>0</sup></td>
+						</tr>
+						<tr>
+							<th>Binary number</th>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Is</th>
+							<td>-</td>
+							<td>0+</td>
+							<td>0+</td>
+							<td>16+</td>
+							<td>8+</td>
+							<td>0+</td>
+							<td>2+</td>
+							<td>1</td>
+						</tr>
+					</table>
+					<p>Which is -27 in denary.</p>
+					<table class="table-bordered table-condensed">
+						<tr>
+							<th>Column value</th>
+							<td>Sign bit</td>
+							<td>64=2<sup>6</sup></td>
+							<td>32=2<sup>5</sup></td>
+							<td>16=2<sup>4</sup></td>
+							<td>8=2<sup>3</sup></td>
+							<td>4=2<sup>2</sup></td>
+							<td>2=2<sup>1</sup></td>
+							<td>1=2<sup>0</sup></td>
+						</tr>
+						<tr>
+							<th>Binary number</th>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Is</th>
+							<td>+</td>
+							<td>64+</td>
+							<td>0+</td>
+							<td>16+</td>
+							<td>8+</td>
+							<td>0+</td>
+							<td>2+</td>
+							<td>1</td>
+						</tr>
+					</table>
+					<p>Which is +91 in denary.</p>
+					<p>In sign and magnitude because the MSB is taken up by the sign bit, using 8 bits means that  
+					the highest value that can be represented is +127 and the lowest value to be -127.</p>
+					<h3>Two's Complement</h3>
+					<p>In two's complement the most significant bit becomes negative for example using 8 bits the most 
+					significant bit has the value of -128.</p>
+					<table class="table-bordered table-condensed">
+						<tr>
+							<th>Column value</th>
+							<td>-128=2<sup>7</sup></td>
+							<td>64=2<sup>6</sup></td>
+							<td>32=2<sup>5</sup></td>
+							<td>16=2<sup>4</sup></td>
+							<td>8=2<sup>3</sup></td>
+							<td>4=2<sup>2</sup></td>
+							<td>2=2<sup>1</sup></td>
+							<td>1=2<sup>0</sup></td>
+						</tr>
+						<tr>
+							<th>Binary number</th>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Is</th>
+							<td>-128+</td>
+							<td>0+</td>
+							<td>0+</td>
+							<td>16+</td>
+							<td>8+</td>
+							<td>0+</td>
+							<td>2+</td>
+							<td>1</td>
+						</tr>
+					</table>
+					<p>Which is -128+16+8+2+1=-101 in denary.</p>
+					<table class="table-bordered table-condensed">
+						<tr>
+							<th>Column value</th>
+							<td>-128=2<sup>7</sup></td>
+							<td>64=2<sup>6</sup></td>
+							<td>32=2<sup>5</sup></td>
+							<td>16=2<sup>4</sup></td>
+							<td>8=2<sup>3</sup></td>
+							<td>4=2<sup>2</sup></td>
+							<td>2=2<sup>1</sup></td>
+							<td>1=2<sup>0</sup></td>
+						</tr>
+						<tr>
+							<th>Binary number</th>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Is</th>
+							<td>0+</td>
+							<td>0+</td>
+							<td>0+</td>
+							<td>16+</td>
+							<td>8+</td>
+							<td>0+</td>
+							<td>2+</td>
+							<td>1</td>
+						</tr>
+					</table>
+					<p>Which is 16+8+2+1=27 in denary.</p>
+					<p>The highest value that can be stored in 8 bit two's complement is 127 and the lowest is -128.</p> 
+				</div>
+				<div class="col-sm-3">
+					<div class="KeyTerms">
+						<h2>Key Terms</h2>
+						<h4>Most Significant Bit (MSB)</h4>
+						<p>The bit in a multiple-bit binary number with the largest value.</p>
+					</div>
+					<div class="KeyPoints">
+						<h2>Key Points</h2>
+						<p>Sign and Magnitude: The MSB is replaced by a sign, 1 for - and 0 for +. This makes arithmetic within 
+						the computer quite complex.</p>
+						<p>Two's Complement: The MSB is considered negative. The computer is able to deal with this number format
+						easily and it makes processing negative values relatively straightforward for the arithmetic and logic 
+						unit.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Representing Numbers in Hexadecimal</h2>
+					<p>Hexadecimal is another number system with a base of 16. Computers do not work in hexadecimal but it is 
+					often used to represent numbers stored in a computer because it is simpler for humans to read and
+					remember. This is because it gives us a direct representation of binary since the base value 
+					16=2<sup>4</sup> or four bits a nibble. This means 8 bits is represented by 2 hex columns, 
+					this makes it easier to remember as 2 digits is easier to remember than 8 1s and 0s. One 
+					problem with hex is that we only have the digits 0-9 when we need 16 so we are missing 5 
+					digits, to make up these missing five we use A-F.</p>
+					<table class="table-bordered table-condensed">
+						<tr>
+							<th>Column value</th>
+							<td>128=2<sup>7</sup></td>
+							<td>64=2<sup>6</sup></td>
+							<td>32=2<sup>5</sup></td>
+							<td>16=2<sup>4</sup></td>
+							<td>8=2<sup>3</sup></td>
+							<td>4=2<sup>2</sup></td>
+							<td>2=2<sup>1</sup></td>
+							<td>1=2<sup>0</sup></td>
+						</tr>
+						<tr>
+							<th>Binary number</th>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<th>Is</th>
+							<td></td>
+							<td>9</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>B</td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
+					<p>10011011 in hex is 9B.</p>
+				</div>
+				<div class="col-sm-3">
+					<div class="KeyTerms">
+						<h2>Key Terms</h2>
+						<h4>Hexadecimal</h4>
+						<p>A number system with a base of 16.</p>
+					</div>
+					<div class="KeyPoints">
+						<h2>KeyPoints</h2>
+						<p>Hexadecimal is number system based on 16, column values are powers of 16.</p>
+						<p>Hexadecimal requires 16 symbols, these are 0-9 and A-F.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<h2>Representing Images in Binary</h2>
+					<p>A simple black and white image is made up of black an white dots. The character can be represented 
+					in binary by simply choosing 1 for black and 0 for white. Real images are more complex than black and
+					white, they have several colours that need to be represented. In a single bit you can only represent 
+					only 2 colours. For more colours you use more bits. 2 bits can represent 4 colours, 3 bits can represent 
+					8 colours, 8 bits can represent 256 colours and 16 bits can represent 65536 colours.</p>
+					<p>The information about the image is stored in Metadata. Metadata includes information about the number 
+					of bits per pixel, colour depth, resolution of the image in dots per inch and height and width in pixels.
+					Image files come in 2 major formats, one of these is a set of pixels in bitmap form, the other is a vector 
+					form. In vector graphics, format images are made up of primitive shapes and with other information about the 
+					shape, including a set of control points the shape must pass through.</p>
+					<p>When enlarged bitmap image becomes pixelated, the pixels become larger and more visable and we can 
+					see the blocks that make up the image. This is not a problem with vector graphics as the infromation that 
+					makes up the shapes is recalculated and the primitive shapes redrawn. Because of this a larger bitmap image 
+					with a high resolution takes more data to store and is linked to the size and resolution of the image.</p>
+				</div>
+				<div class="col-sm-3">
+					<div class="KeyTerms">
+						<h2>Key Terms</h2>
+						<h4>Metadata</h4>
+						<p>The information about the image that allows the computer to interpret the stored binary accurately 
+						to reproduce the image. This must contain the width and height in pixels and the colour depth in bits 
+						per pixel</p>
+						<h4>Colour Depth</h4>
+						<p>The number of bits used for each dot or pixel. The more bits, the greater the number of colours 
+						that can be represented.</p>
+						<h4>Resolution</h4>
+						<p>The number of pixels or dots per unit, i.e dot per inch.</p>
+					</div>
+				</div>
+			</div>
   	</body>
 </html>
